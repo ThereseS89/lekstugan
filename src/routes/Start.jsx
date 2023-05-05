@@ -12,7 +12,7 @@ const Start = () => {
 		</div>
 		<div
 		className="first-page-info">
-			<h2 className="first-page-text">Kolla in sommarens leksaksfavoriter! <br /> Vi har produkter för både stora och små!</h2>
+			<h2 className="first-page-text">Kolla in sommarens leksaksfavoriter! <br/><br/> Vi har produkter för både stora och små!</h2>
 		</div>
 		<div className="popular-text">
 					<p className="popular">Populärt just nu</p>
