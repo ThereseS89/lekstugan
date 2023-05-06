@@ -2,6 +2,8 @@ import Start from "./routes/Start.jsx"
 import Products from "./routes/Products.jsx"
 import Root from "./Root.jsx"
 import { createHashRouter } from "react-router-dom"
+import Admin from "./routes/Admin.jsx"
+import Cart from "./routes/Cart.jsx"
 
 
 const router = createHashRouter([
@@ -18,6 +20,15 @@ const router = createHashRouter([
 
 						path: 'products',
 						element: <Products />
+					}, 
+					{
+						path: 'admin',
+						element: <Admin />
+					},
+					{
+						path: 'cart',
+						element: <Cart />
+
 					}
 					
 		]

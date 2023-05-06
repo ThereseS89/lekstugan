@@ -1,0 +1,30 @@
+
+
+
+footer {
+	background-color: #F83362;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer h4, footer p, footer h3 {
+	margin: 0.5em 0em 0.2em 0;
+}
+
+.call-container, .mail-container, .social-media-icons-container {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.social-media-icons-container > * {
+	margin: 0.3em;
+}
+
+.call-container h4, .mail-container h4 {
+	margin: 0 0.5em 0em 0em;
+
+}
+
