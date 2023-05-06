@@ -5,12 +5,13 @@ const HamburgerNav = () => {
 	return (
 		<nav>
 			<ul>
-				<li><NavLink to="/">START</NavLink></li>
-				<li><NavLink to="products">SOMMARLEKSAKER</NavLink></li>
-				<li><NavLink to="about">OM LEKSTUGAN</NavLink></li>
+				<div className="background"><li className="li-start"><NavLink to="/">START</NavLink></li></div>
+				<li className="li-products"><NavLink to="products">SOMMARLEKSAKER</NavLink></li>
+				<li className="li-about"><NavLink to="about">OM LEKSTUGAN</NavLink></li>
 				<li><NavLink>KONTAKT</NavLink></li>
-				<li><NavLink>MINA SIDOR</NavLink></li>
-				<li><NavLink to="admin">PERSONAL</NavLink></li>
+				<div className="background-green">
+				<li className="nav-cart"><NavLink to="/cart">VARUKORGEN</NavLink></li>
+				</div>
 			</ul>
 		</nav>
 	)

@@ -1,12 +1,11 @@
 
-
-
 footer {
 	background-color: #F83362;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 2em;
 }
 
 footer h4, footer p, footer h3 {

@@ -1,4 +1,40 @@
 ul li {
 	list-style-type: none;
+	padding-bottom: 2em;
+	padding-left: 1em;
+	
 }
+
+ .li-start a, .nav-cart a {
+	color: white;
+}
+
+
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0em;
+}
+
+.background {
+	background-color: #F83362;
+	margin-bottom: 3em;
+}
+
+.nav-cart {
+	padding-bottom: 0;
+}
+
+.background-green {
+	background-color: #429C76;
+	margin-top: 1.5em;
+}
+
+.li-start, .nav-cart {
+	
+	padding: 1em 0em 1em 1em;
+} 
 
