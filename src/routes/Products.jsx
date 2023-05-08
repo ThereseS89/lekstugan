@@ -1,16 +1,20 @@
 import { getProducts } from "../getProducts"
 import { useState, useEffect } from "react"
+import { uploadProducts } from "../uploadProducts"
 
 
 const Products = () => {
 	const [summerToys, setSummerToys] = useState([])
+	uploadProducts()
 	useEffect(() => {
 		async function fetchData() {
 			const summerData = await getProducts();
+			console.log("summerData: ", summerData)
 			setSummerToys(summerData)
 		}
+		console.log()
 		fetchData()
-	}, [])
+	},[])
 	
 
 
