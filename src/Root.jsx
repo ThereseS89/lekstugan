@@ -2,7 +2,7 @@
 import { Outlet } from "react-router-dom"
 import HamburgerNav from "./Components/HamburgerNav"
 import Header from "./Components/header.jsx"
-import Footer from "./Components/footer"
+import Footer from "./Components/Footer"
 import { showNavState } from "./atoms/showNavState"
 import { useRecoilState } from "recoil"
 

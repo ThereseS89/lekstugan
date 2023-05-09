@@ -4,6 +4,7 @@ import Root from "./Root.jsx"
 import { createHashRouter } from "react-router-dom"
 import Admin from "./routes/Admin.jsx"
 import Cart from "./routes/Cart.jsx"
+import DetailPage from './routes/DetailPage.jsx'
 
 
 const router = createHashRouter([
@@ -28,7 +29,11 @@ const router = createHashRouter([
 					{
 						path: 'cart',
 						element: <Cart />
+					},
 
+					{
+						path: 'product/:id',
+						element: <DetailPage />
 					}
 					
 		]

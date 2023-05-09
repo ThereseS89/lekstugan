@@ -196,7 +196,7 @@ export async function uploadProducts() {
 	addProduct(product)
  })
 }
-uploadProducts()
+
 
 
 

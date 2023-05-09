@@ -5,7 +5,8 @@ async function deleteAll() {
 
 	let ids = await getProductIds()
 
-	ids.forEach(async id => {
+	for (const id of ids) {
+
 		const data = { shopid: shopId, productid: id, action: 'delete-product' }
 		const options = {
 			method: 'DELETE',
@@ -15,24 +16,30 @@ async function deleteAll() {
 		const response = await fetch(url, options)
 		const statusObject = await response.json()
 		console.log('Delete status: ', statusObject)
-	})
+
+	}
 }
+
+// 	ids.forEach(async id => {
+// 		const data = { shopid: shopId, productid: id, action: 'delete-product' }
+// 		const options = {
+// 			method: 'DELETE',
+// 			headers: { 'Content-Type': 'application/json' },
+// 			body: JSON.stringify(data)
+// 		}
+// 		const response = await fetch(url, options)
+// 		const statusObject = await response.json()
+// 		console.log('Delete status: ', statusObject)
+// 	})
+// }
 
 async function getProductIds() {
 	console.log('Getting products...')
 	const response = await fetch(url + '?action=get-products&shopid=' + shopId)
-
-	if(!response.ok) {
-		console.error('error fetching products: ', response.status, response.statusText)
-		const text = await response.text()
-		console.error('response body:', text)
-		return []
-	}
-
 	const data = await response.json()
 	console.log('Response from API:', data)
 	return data.map(product => product.id)
 }
-
 deleteAll()
+
 
