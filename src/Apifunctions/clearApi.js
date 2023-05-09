@@ -1,4 +1,4 @@
-import { url, shopId } from './constants/constants.js'
+import { url, shopId } from '../constants/constants.js'
 
 async function deleteAll() {
 	console.log('Preparing to delete...')
@@ -21,9 +21,17 @@ async function deleteAll() {
 async function getProductIds() {
 	console.log('Getting products...')
 	const response = await fetch(url + '?action=get-products&shopid=' + shopId)
+
+	if(!response.ok) {
+		console.error('error fetching products: ', response.status, response.statusText)
+		const text = await response.text()
+		console.error('response body:', text)
+		return []
+	}
+
 	const data = await response.json()
 	console.log('Response from API:', data)
-	return data.map(product => product.id)  // [ id1, id2, ... ]
+	return data.map(product => product.id)
 }
 
 deleteAll()

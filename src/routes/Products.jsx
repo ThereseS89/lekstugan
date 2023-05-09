@@ -1,11 +1,11 @@
-import { getProducts } from "../getProducts"
+import { getProducts } from "../Apifunctions/getProducts.js"
 import { useState, useEffect } from "react"
-import { uploadProducts } from "../uploadProducts"
+import './Stylesheet/Products.css'
 
 
 const Products = () => {
 	const [summerToys, setSummerToys] = useState([])
-	uploadProducts()
+	
 	useEffect(() => {
 		async function fetchData() {
 			const summerData = await getProducts();
@@ -19,23 +19,31 @@ const Products = () => {
 
 
 	return (
-		<section>
-			<div>
-				<p>SOMMARLEKSAKER</p>
-				<ul>
-					{summerToys.map((summerToy) => (
+		<section className="products-container">
+
+			
+				<div className="head-container">
+					<h1 className="head-products">SOMMARLEKSAKER</h1>
+				</div>
+
+				
+					<ul className="summertoy-list">
+						{summerToys.map((summerToy) => (
 						<div
-						className="summertoy-container"
-						key={summerToy.id}>
-							<h2>{summerToy.name}</h2>
-							
-							<p>{summerToy.price}</p>
-							<button>KÖP</button>
+							className="summertoy-container"
+							key={summerToy.id}>
+
+								<h2>{summerToy.name}</h2>
+								<img src={summerToy.picture}/>
+								<p>{summerToy.price}</p>
+								<button>KÖP</button>
+
 						</div>
-					))}
-						
-				</ul>
-			</div>
+						))}
+							
+					</ul>
+			
+			
 		</section>
 	)
 

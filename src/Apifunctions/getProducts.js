@@ -1,4 +1,4 @@
-import { url, shopId} from './constants/constants'
+import { url, shopId} from '../constants/constants.js'
 
 
 export async function getProducts() {

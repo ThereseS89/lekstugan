@@ -4,17 +4,20 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import './header.css'
-import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { showNavState } from "../atoms/showNavState";
 
 const Header = () => {
-	const [showNav, setShowNav] = useState(false)
-
+	const [showNav, setShowNav] = useRecoilState(showNavState)
+	console.log(showNav)
 	function handleClickNav() {
+		console.log('clicked on hamburgermenu')
 		if (!showNav) {
 			setShowNav(true)
 		} else {
 			setShowNav(false)
 		}
+		console.log(showNav)
 	}
 
 	return (
