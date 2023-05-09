@@ -1,10 +1,10 @@
 import { getProducts } from "../Apifunctions/getProducts.js"
-import { uploadProducts } from "../Apifunctions/uploadProducts.js";
+// import { uploadProducts } from "../Apifunctions/uploadProducts.js";
 import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import "./Stylesheet/products.css"
 
 
 const Products = () => {
@@ -13,7 +13,7 @@ const Products = () => {
 
 	// Hämtar alla produkter från API:et
 	useEffect(() => {
-		uploadProducts()
+		// uploadProducts()
 		async function fetchData() {
 			const summerData = await getProducts();
 			setSummerToys(summerData)
@@ -26,24 +26,30 @@ const Products = () => {
 		<section className="products-container">
 			<div className="head-products">
 				<p>SOMMARLEKSAKER</p>
-				<ul>
+			</div>
+				<ul className="summertoy-list">
 					{summerToys.map((summerToy) => (
 					
 					<div
 						className="summertoy-container"
 						key={summerToy.id}>
-							<Link to={`/product/${summerToy.id}`}>
-								<h2>{summerToy.name}</h2>
-								<img src={summerToy.picture}/></Link>
-							<p>{summerToy.price}</p>
+							<Link className="link-product"
+							to={{ pathname: `/products/${summerToy.id}`, state: { product: summerToy },
+					}}>
+								<h2 className="head-summertoy-text">{summerToy.name}</h2>
+								<div className="image-container">
+								<img className="summertoy-image"
+								src={summerToy.picture}/></div></Link>
+							<div className="price-container-summertoy">
+							<p>{summerToy.price} Kr</p></div>
 							<button>KÖP <FontAwesomeIcon
 						icon={faCartShopping}
-						id="cart-icon" /></button>
+						id="cart-icon-product" /></button>
 						</div>
 					))}
 						
 				</ul>
-			</div>
+			
 		</section>
 	)
 

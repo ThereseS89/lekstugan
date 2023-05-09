@@ -1,0 +1,54 @@
+
+img {
+	width: 200px;
+	grid-row: 1;
+	grid-column: 1 / span 2;
+	justify-self: center;
+}
+
+.head-container-detail {
+	background-color: #429C76;
+	color: white;
+	text-align: center;
+}
+
+.head-detail {
+	font-weight: 200;
+	padding: 0.5em;
+}
+
+.grid-layout-detail {
+	display: grid;
+	grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
+	grid-template-columns: 1fr 0.5fr;
+	margin: 1em;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 1em;
+}
+
+.price-container-detail {
+	background-color: #E52727;
+	width: fit-content;
+	border-radius: 1em;
+}
+
+.price-container-detail p {
+	padding: 0em 2em 0em 2em;
+	color: white;
+}
+
+.detail-btn {
+	background-color: #429C76;
+	border-radius: 1em;
+	padding: 1em;
+	width: 200px;
+	color: white;
+	font-size: 16px;
+}
+
+.container-sum {
+	border: solid 1px black;
+
+}
+

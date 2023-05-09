@@ -32,7 +32,7 @@ const router = createHashRouter([
 					},
 
 					{
-						path: 'product/:id',
+						path: 'products/:id',
 						element: <DetailPage />
 					}
 					
