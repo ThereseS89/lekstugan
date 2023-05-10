@@ -1,6 +1,6 @@
 import { getProducts } from "../Apifunctions/getProducts.js"
 // import { uploadProducts } from "../Apifunctions/uploadProducts.js";
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -9,13 +9,10 @@ import { useRecoilState } from "recoil";
 import { storeApiData } from "../atoms/storeApiData.js";
 import { buyState } from "../atoms/buyState.js";
 
-
-
 const Products = () => {
 
 	const [summerToys, setSummerToys] = useRecoilState(storeApiData)
 	const [buySummerToy, setBuySummerToy] = useRecoilState(buyState)
-	
 
 	// Hämtar alla produkter från API:et
 	useEffect(() => {
@@ -25,15 +22,34 @@ const Products = () => {
 			setSummerToys(summerData)
 		}
 		fetchData()
-	}, [])
+	}, []);
 
-	
+	const [clickCountCart, setClickCountCart] = useState({});
+
 	const handleBuyBtn = (summerToy ) => {
+		const id = summerToy.id
+
 			console.log('Du klickade på köp-knappen', summerToy)
-			setBuySummerToy((clickedSummerToy) => [...clickedSummerToy, summerToy])
+			setBuySummerToy((clickedSummerToy) => {
+				const cartSummerToy = clickedSummerToy.find((product) => product.summerToy.id === id);
+
+				if(cartSummerToy) {
+					return clickedSummerToy.map((product) => product.summerToy.id === id ? { ...product, quantity: product.quantity + 1} : product)
+				} else {
+					return [...clickedSummerToy, {summerToy, quantity: 1 }]
+				}
+			})
+			// setBuySummerToy((clickedSummerToy) => [...clickedSummerToy, summerToy])
+
+			setClickCountCart((prevClickCounts) => {
+				const newClickCounts = { ...prevClickCounts }
+				
+				newClickCounts[id] = (newClickCounts[id] || 0) + 1;
+				return newClickCounts;
+				
+			})
 	}
 
-	useEffect(() => {console.log('buySummerToy uppdaterad: ', buySummerToy)}, [buySummerToy])
 
 	return (
 		<section className="products-container">

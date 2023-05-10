@@ -9,6 +9,8 @@ const Cart = () => {
 
 	console.log('Vad finns i :', buySummerToy)
 
+	const totalSum = buySummerToy.reduce((sum, summerToy) => sum + (summerToy.summerToy.price * summerToy.quantity), 0)
+
 	return (
 		<>
 	<div className="cart-head-container" >
@@ -16,21 +18,24 @@ const Cart = () => {
 	</div>
 
 	<div className="cart-info-container">
-		{buySummerToy.map((summerToy, index)=> (
-		<div className="cart-item-container" key={index}>
+		{buySummerToy.map((buyItem, id) =>{
+			const summerToy = buyItem.summerToy
+			return (
+				<div className="cart-item-container" key={id}>
 		<h2>{summerToy?.name}</h2>
 		<img src={summerToy?.picture}></img>
-		<p className='count'>Antal: </p>
+		<p className='count'>Antal: {buyItem?.quantity}</p>
 		<div className='btn-container'>
 		<button>-</button>
 		<button>+</button></div>
-		<p className='cart-item-sum'>Summa: {summerToy?.price} kr</p>
+		<p className='cart-item-sum'>Summa: {summerToy?.price * buyItem.quantity} kr</p>
 		</div>
-		))}
+		)
+		})}
 
 	</div>
 
-		<p>Totalsumma:</p>
+		<p>Totalsumma: {totalSum} kr</p>
 	</>
 		)
 }

@@ -43,7 +43,7 @@
 	grid-column: 3;
 	position: absolute;
 	top: 10em;
-	left: 13em;
+	left: -7em;
   }
   
   .price {
@@ -75,4 +75,6 @@
 	justify-content: center;
   
   }
+
+  
   

@@ -7,8 +7,6 @@ import { useRecoilState } from "recoil"
 import { storeApiData } from "../atoms/storeApiData"
 
 
-
-
 const DetailPage = () => {
 	const [summerToys, setSummerToys] = useRecoilState(storeApiData)
 	const { id } = useParams()
