@@ -5,9 +5,13 @@ import { createHashRouter } from "react-router-dom"
 import Admin from "./routes/Admin.jsx"
 import Cart from "./routes/Cart.jsx"
 import DetailPage from './routes/DetailPage.jsx'
+// import { useRecoilState } from "recoil"
+// import { showCartState } from "./atoms/showCartState.js"
+// const [showCart, setShowCart] = useRecoilState(showCartState)
 
 
 const router = createHashRouter([
+	
 	{
 		path: '/',
 		element: <Root />,
@@ -28,7 +32,7 @@ const router = createHashRouter([
 					},
 					{
 						path: 'cart',
-						element: <Cart />
+						element:  <Cart /> 
 					},
 
 					{
@@ -40,4 +44,5 @@ const router = createHashRouter([
 	}
 ])
 
-export {router}
+
+export default router

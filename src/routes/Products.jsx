@@ -1,15 +1,21 @@
 import { getProducts } from "../Apifunctions/getProducts.js"
 // import { uploadProducts } from "../Apifunctions/uploadProducts.js";
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { Link } from 'react-router-dom' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Stylesheet/products.css"
+import { useRecoilState } from "recoil";
+import { storeApiData } from "../atoms/storeApiData.js";
+import { buyState } from "../atoms/buyState.js";
+
 
 
 const Products = () => {
 
-	const [summerToys, setSummerToys] = useState([])
+	const [summerToys, setSummerToys] = useRecoilState(storeApiData)
+	const [buySummerToy, setBuySummerToy] = useRecoilState(buyState)
+	
 
 	// Hämtar alla produkter från API:et
 	useEffect(() => {
@@ -21,6 +27,13 @@ const Products = () => {
 		fetchData()
 	}, [])
 
+	
+	const handleBuyBtn = (summerToy ) => {
+			console.log('Du klickade på köp-knappen', summerToy)
+			setBuySummerToy((clickedSummerToy) => [...clickedSummerToy, summerToy])
+	}
+
+	useEffect(() => {console.log('buySummerToy uppdaterad: ', buySummerToy)}, [buySummerToy])
 
 	return (
 		<section className="products-container">
@@ -42,7 +55,8 @@ const Products = () => {
 								src={summerToy.picture}/></div></Link>
 							<div className="price-container-summertoy">
 							<p>{summerToy.price} Kr</p></div>
-							<button>KÖP <FontAwesomeIcon
+							<button
+							onClick={() => handleBuyBtn(summerToy)}>KÖP <FontAwesomeIcon
 						icon={faCartShopping}
 						id="cart-icon-product" /></button>
 						</div>

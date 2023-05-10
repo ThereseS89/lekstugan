@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import './index.css'
-import {router} from './routeConfig.jsx'
+import router from './routeConfig'
 import { RecoilRoot } from 'recoil'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -8,6 +8,7 @@ header {
 #hamburger-icon {
 	font-size: 1.8em;
 	padding-right: 0.3em;
+	padding-left: 0.5em;
 }
 
 .logo-container {
@@ -23,6 +24,8 @@ header {
 
 #cart-icon {
 	font-size: 1.5em;
+	padding-right: 0.5em;
+	color:black;
 }
 
 .searchBar {

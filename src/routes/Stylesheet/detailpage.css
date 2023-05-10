@@ -19,9 +19,9 @@ img {
 
 .grid-layout-detail {
 	display: grid;
-	grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
+	grid-template-rows: 1fr 0.5fr 0.3fr 1fr 0.5fr;
 	grid-template-columns: 1fr 0.5fr;
-	margin: 1em;
+	margin: 0.5em;
 	justify-content: center;
 	align-items: center;
 	grid-gap: 1em;
@@ -29,12 +29,12 @@ img {
 
 .price-container-detail {
 	background-color: #E52727;
-	width: fit-content;
 	border-radius: 1em;
+	text-align: center;
 }
 
 .price-container-detail p {
-	padding: 0em 2em 0em 2em;
+	padding: 0;
 	color: white;
 }
 
@@ -48,7 +48,23 @@ img {
 }
 
 .container-sum {
-	border: solid 1px black;
+	width: 50px;
+	padding: 1em;
+	text-align: center;
+}
+
+.container-sum::placeholder {
+	text-align: center;
+}
+
+.description-container {
+	grid-column: 1 / span 2;
+	grid-row: 4;
+	text-align: center;
+}
+
+#check-mark-green {
+	color: #429C76;
 
 }
 
