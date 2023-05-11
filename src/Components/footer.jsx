@@ -1,6 +1,6 @@
 import "./footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhone, faEnvelope, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faFacebook} from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"

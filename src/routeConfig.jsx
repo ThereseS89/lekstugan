@@ -38,7 +38,7 @@ const router = createHashRouter([
 					{
 						path: 'products/:id',
 						element: <DetailPage />
-					}
+					},
 					
 		]
 	}

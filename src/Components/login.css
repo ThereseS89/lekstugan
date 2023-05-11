@@ -15,9 +15,8 @@
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	background-color: #F83362;
-	border-radius: 2em;
-	padding: 1em 4em 4em 4em;
+	background-color: #d9d9d9;
+	padding: 7em 4em 4em 4em;
 	width: 50%;
 	text-align: center;
 	margin: 0;
@@ -25,4 +24,43 @@
 	border: solid 1px rgb(75, 75, 75);
 	box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 15px;
 	max-width: 250px;
+
+}
+
+.head-container-login {
+	background-color: #F83362;
+	left: 0;
+	top: 1em;
+	margin: 0;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.close-icon-admin {
+	margin-left: 1em;
+	font-size: 1.5em;
+}
+
+.logIn-button {
+	background-color: #429C76;
+	margin-top: 2em;
+	width: fit-content;
+	padding: 1em 2em 1em 2em;
+	align-self: center;
+}
+
+.label-style {
+	align-self: flex-start;
+	padding: 1.5em 0 0.5em 0em;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.input {
+	font-size: 18px;
+	padding: 0.5em 0.5em 0.5em 0.3em;
 }

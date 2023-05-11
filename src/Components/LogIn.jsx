@@ -2,17 +2,19 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import './login.css'
+import { useRecoilState } from "recoil";
+import { openLoginState } from "../atoms/openLoginState";
 
 const Login = () => {
-	
+	const [open, setOpen] = useRecoilState(openLoginState);
 	const [password, setPassword] = useState("");
 	const [userName, setUserName] = useState("");
 	const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
 	const [isUserNameCorrect, setIsUserNameCorrect] = useState(false);
 	const [hasSubmitted, setHasSubmitted] = useState(false);
 	const [userNameErrorMessage, setUserNameErrorMessage] = useState("");
-	const correctPassword = "mums";
-	const correctUserName = "admin";
+	const correctPassword = ["password"];
+	const correctUserName = ["admin"];
 	const allowedChars = "abcdefghijklmnopqrstuvwxyzåäö";
 	const [userNameError, setUserNameError] = useState(false);
 	const [passwordError, setPasswordError] = useState(false);
@@ -77,7 +79,7 @@ const Login = () => {
 
 	const closeLogin = () => {
 
-		props.onClose();
+		
 
 	};
 
@@ -85,14 +87,18 @@ const Login = () => {
 	return (
 
 		<div className="overlay">
+			
 			<form className="form-container">
 
-				<FontAwesomeIcon
-				className="close-icon-admin"
-				icon={faXmark}
-				/>
-  
-				<h2 className="login">Logga in</h2>
+				
+				<div className="head-container-login">
+					<h2 className="login">LOGGA IN - ADMIN</h2>
+					<FontAwesomeIcon onClick={() => setOpen(false)}
+					className="close-icon-admin"
+					icon={faXmark}
+					/>
+				</div>
+
 				<label className="label-style">Användarnamn: </label>
 				<input
 					className="input"

@@ -1,0 +1,21 @@
+
+.head-container-admin {
+	background-color: #429C76;
+	text-align: center;
+	color: white;
+}
+
+.head-container-admin p {
+	padding: 0.5em;
+	font-size: 20px;
+}
+
+.flex-position {
+	display: flex;
+	align-items: center;
+}
+
+.flex-position p {
+	padding-right: 0.5em;
+	padding-left: 1em;
+}

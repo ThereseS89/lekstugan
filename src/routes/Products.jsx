@@ -12,7 +12,7 @@ import { buyState } from "../atoms/buyState.js";
 const Products = () => {
 
 	const [summerToys, setSummerToys] = useRecoilState(storeApiData)
-	const [buySummerToy, setBuySummerToy] = useRecoilState(buyState)
+	const [ setBuySummerToy ] = useRecoilState(buyState)
 
 	// Hämtar alla produkter från API:et
 	useEffect(() => {
@@ -24,7 +24,7 @@ const Products = () => {
 		fetchData()
 	}, []);
 
-	const [clickCountCart, setClickCountCart] = useState({});
+	const [ setClickCountCart] = useState({});
 
 	const handleBuyBtn = (summerToy ) => {
 		const id = summerToy.id
