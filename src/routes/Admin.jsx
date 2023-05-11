@@ -1,6 +1,6 @@
 import '../routes/Stylesheet/admin.css'
 import { useRecoilState } from 'recoil'
-import { useEffect, Link } from 'react'
+import { useEffect} from 'react'
 import { storeApiData } from '../atoms/storeApiData'
 import { getProducts } from '../Apifunctions/getProducts'
 import { faPen } from '@fortawesome/free-solid-svg-icons'

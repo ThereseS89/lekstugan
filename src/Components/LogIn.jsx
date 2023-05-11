@@ -24,13 +24,9 @@ const Login = () => {
 		event.preventDefault();
 		setHasSubmitted(true);
 		
-
 		if ((password === correctPassword) && (userName === correctUserName)) {
 			setIsPasswordCorrect(true);
 			setIsUserNameCorrect(true);
-			props.setShowAdminPage(true);
-			
-			closeLogin();
 			
 		} else {
 			if (password !== correctPassword) {
@@ -76,12 +72,6 @@ const Login = () => {
 		return [true, '', setHasSubmitted(false)]
 		
 	}
-
-	const closeLogin = () => {
-
-		
-
-	};
 
 
 	return (

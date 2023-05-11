@@ -7,7 +7,7 @@ const HamburgerNav = () => {
 			<ul>
 				<div className="background"><li className="li-start"><NavLink to="/">START</NavLink></li></div>
 				<li className="li-products"><NavLink to="products">SOMMARLEKSAKER</NavLink></li>
-				<li className="li-about"><NavLink to="about">OM LEKSTUGAN</NavLink></li>
+				<li className="li-about"><NavLink to="errorpage">OM LEKSTUGAN</NavLink></li>
 				<li><NavLink>KONTAKT</NavLink></li>
 				<div className="background-green">
 				<li className="nav-cart"><NavLink to="/cart">VARUKORGEN</NavLink></li>

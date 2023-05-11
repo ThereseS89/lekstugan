@@ -56,7 +56,7 @@ const Header = () => {
 		
 			<ul className="wideNav">
 				<NavLink id="links" to="products"><li>SOMMARLEKSAKER</li></NavLink>
-				<NavLink id="links"><li>OM LEKSTUGAN</li></NavLink>
+				<NavLink to="errorpage" id="links"><li>OM LEKSTUGAN</li></NavLink>
 				<NavLink id="links"><li>KONTAKT</li></NavLink ><li><FontAwesomeIcon 
 				onClick={()=> showSearchBar()}
 				id="search-icon-wide" icon={faMagnifyingGlass} /></li>{showSearch ?<input 
