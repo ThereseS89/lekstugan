@@ -26,4 +26,19 @@ footer h4, footer p, footer h3 {
 	margin: 0 0.5em 0em 0em;
 
 }
+.staff-container {
+	display: none;
+}
+
+.staff-container p {
+	color: white;
+}
+
+@media (min-width: 800px) {
+	.staff-container {
+		display: inline;
+		justify-content: flex-end;
+	}
+}
+
 

@@ -1,16 +1,38 @@
 import "./footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faPhone, faEnvelope, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faFacebook} from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { Link } from "react-router-dom"
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons"
+import { useRecoilState } from "recoil"
+import { openLoginState } from "../atoms/openLoginState"
 
 
 
 const Footer = () => {
+const [open, setOpen] = useRecoilState(openLoginState);
+	
+	
+	const openLogin = () => {
+		console.log("Funktionen körs");
+		if (!open) {
+			setOpen(true)
+		} else {
+			setOpen(false)
+		}
+		window.scrollTo(0, 0);
+	};
+
+	console.log("open:", open);
+
 	return (
+		<>
+		
+
 		<footer>
 			<h3>Kundservice</h3>
 			<div className="call-container">
@@ -30,7 +52,11 @@ const Footer = () => {
 				<FontAwesomeIcon icon={faYoutube} />
 			</div>
 			<Link to="/"><p>Startsidan</p></Link>
+			<span className="staff-container">
+			<p onClick={()=> openLogin()}>LOGGA IN</p><FontAwesomeIcon onClick={()=> openLogin()} icon={faArrowRightToBracket} />
+			<p>LOGGA UT</p><FontAwesomeIcon icon={faArrowRightFromBracket} /></span>
 		</footer>
+		</>
 	)
 } 
 

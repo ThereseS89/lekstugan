@@ -25,7 +25,7 @@
 	
 	display: grid;
 	grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 0.5fr;
 	background-color: white;
 	min-width: 300px;
 	margin: 1em;
@@ -47,13 +47,23 @@
 .count {
 	grid-row: 3;
 	grid-column: 1;
+	margin: 0;
+	align-self: center;
 }
 .btn-container {
 	grid-row: 3;
 	grid-column: 2;
+	align-self: center;
 }
 
 .cart-item-sum {
 	grid-row: 4;
+	font-weight: 600;
+}
+
+#trash-icon {
+	grid-row: 3;
+	grid-column: 3;
+	align-self: center;
 }
 

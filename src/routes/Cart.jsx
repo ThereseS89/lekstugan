@@ -1,6 +1,8 @@
 import './Stylesheet/cart.css'
 import { useRecoilState} from 'recoil'
 import { buyState } from '../atoms/buyState'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -28,6 +30,7 @@ const Cart = () => {
 		<div className='btn-container'>
 		<button>-</button>
 		<button>+</button></div>
+		<FontAwesomeIcon id="trash-icon" icon={faTrash} />
 		<p className='cart-item-sum'>Summa: {summerToy?.price * buyItem.quantity} kr</p>
 		</div>
 		)
