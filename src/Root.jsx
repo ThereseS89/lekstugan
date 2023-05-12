@@ -8,14 +8,22 @@ import Login from "./Components/LogIn"
 import { showNavState } from "./atoms/showNavState"
 import { useRecoilState } from "recoil"
 import { openLoginState } from "./atoms/openLoginState"
+import { showResultState } from "./atoms/showResultState"
+import ResultContainer from "./Components/ResultContainer"
 
 const Root = () => {
 	const [open, setOpen] = useRecoilState(openLoginState);
 	const [showNav, setShowNav] = useRecoilState(showNavState)
+	const [showResult, setShowResult] = useRecoilState(showResultState)
+	setOpen;
+	setShowNav;
+	setShowResult;
+
 	return (
 		<>
 			<Header />
 			{showNav ? <HamburgerNav /> : null}
+			{showResult ? <ResultContainer /> : null}
 		<main>
 			{open ? <Login /> : null}
 			{/* <Admin /> */}

@@ -7,7 +7,8 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 const Cart = () => {
-	const [buySummerToy] = useRecoilState(buyState)
+	const [buySummerToy, setBuySummerToy] = useRecoilState(buyState)
+	setBuySummerToy;
 
 	console.log('Vad finns i :', buySummerToy)
 
