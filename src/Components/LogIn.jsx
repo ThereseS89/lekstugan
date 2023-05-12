@@ -4,8 +4,11 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import './login.css'
 import { useRecoilState } from "recoil";
 import { openLoginState } from "../atoms/openLoginState";
+import { Link, useNavigate } from "react-router-dom"
+
 
 const Login = () => {
+	const navigate = useNavigate()
 	const [open, setOpen] = useRecoilState(openLoginState);
 	const [password, setPassword] = useState("");
 	const [userName, setUserName] = useState("");
@@ -13,8 +16,8 @@ const Login = () => {
 	const [isUserNameCorrect, setIsUserNameCorrect] = useState(false);
 	const [hasSubmitted, setHasSubmitted] = useState(false);
 	const [userNameErrorMessage, setUserNameErrorMessage] = useState("");
-	const correctPassword = ["password"];
-	const correctUserName = ["admin"];
+	const correctPassword = "password";
+	const correctUserName = "admin";
 	const allowedChars = "abcdefghijklmnopqrstuvwxyzåäö";
 	const [userNameError, setUserNameError] = useState(false);
 	const [passwordError, setPasswordError] = useState(false);
@@ -23,10 +26,14 @@ const Login = () => {
 	const LoginEvents = (event) => {
 		event.preventDefault();
 		setHasSubmitted(true);
+		console.log('Du tryckte på knappen')
 		
 		if ((password === correctPassword) && (userName === correctUserName)) {
 			setIsPasswordCorrect(true);
 			setIsUserNameCorrect(true);
+			navigate('/admin')
+			setOpen(false)
+
 			
 		} else {
 			if (password !== correctPassword) {
@@ -52,6 +59,7 @@ const Login = () => {
 		if (hasSubmitted) {
 			setIsPasswordCorrect(event.target.value === correctPassword);
 		}
+		
 	};
 
 	const inputChange = (event) => {
@@ -114,11 +122,12 @@ const Login = () => {
 
 			{hasSubmitted && passwordError && <p className='error-message'>Felaktigt lösenord, vänligen prova igen!</p> }
 
-			<button
+			
+				<button
 				className="logIn-button"
 				type="submit"
-				onClick={LoginEvents}>Logga in
-			</button>
+				onClick={LoginEvents}> Logga in </button>
+			
 			
 		</form>
 		</div> 

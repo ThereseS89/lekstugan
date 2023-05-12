@@ -54,7 +54,7 @@ const [open, setOpen] = useRecoilState(openLoginState);
 			<Link to="/"><p>Startsidan</p></Link>
 			<span className="staff-container">
 			<p onClick={()=> openLogin()}>LOGGA IN</p><FontAwesomeIcon onClick={()=> openLogin()} icon={faArrowRightToBracket} />
-			<p>LOGGA UT</p><FontAwesomeIcon icon={faArrowRightFromBracket} /></span>
+			</span>
 		</footer>
 		</>
 	)

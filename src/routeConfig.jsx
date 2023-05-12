@@ -47,5 +47,5 @@ const router = createHashRouter([
 	}
 ])
 
-
 export default router
+

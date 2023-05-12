@@ -1,5 +1,5 @@
 import { getProducts } from "../Apifunctions/getProducts.js"
-// import { uploadProducts } from "../Apifunctions/uploadProducts.js";
+//import { uploadProducts } from "../Apifunctions/uploadProducts.js";
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,7 @@ import { buyState } from "../atoms/buyState.js";
 const Products = () => {
 
 	const [summerToys, setSummerToys] = useRecoilState(storeApiData)
-	const [ setBuySummerToy ] = useRecoilState(buyState)
+	const [ buysummerToy, setBuySummerToy ] = useRecoilState(buyState)
 
 	// Hämtar alla produkter från API:et
 	useEffect(() => {
@@ -24,7 +24,7 @@ const Products = () => {
 		fetchData()
 	}, []);
 
-	const [ setClickCountCart] = useState({});
+	const [ clickCountCart, setClickCountCart] = useState({});
 
 	const handleBuyBtn = (summerToy ) => {
 		const id = summerToy.id

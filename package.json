@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "clear-products": "node ./src/Apifunctions/clearApi.js"
+    "clear-products": "node ./src/Apifunctions/clearApi.js",
+    "upload-products": "node ./src/Apifunctions/uploadProducts.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -17,7 +18,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.0",
+    "react-router-dom": "^6.11.1",
     "recoil": "^0.7.7"
   },
   "devDependencies": {
@@ -30,6 +31,4 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.2"
   }
-  
-
 }

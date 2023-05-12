@@ -7,12 +7,14 @@ import { faPen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+//import { uploadProducts } from '../Apifunctions/uploadProducts'
 
 const Admin = () => {
 	const [summerToys, setSummerToys] = useRecoilState(storeApiData)
 
 	useEffect(() => {
-		// uploadProducts()
+		//uploadProducts()
 		async function fetchData() {
 			const summerData = await getProducts();
 			setSummerToys(summerData)
@@ -24,6 +26,9 @@ const Admin = () => {
 		<>
 			<div className="head-container-admin">
 				<p>ADMIN</p>
+				<div className="container-log-out">
+				<p>LOGGA UT</p><FontAwesomeIcon icon={faArrowRightFromBracket} />
+				</div>
 			</div>
 
 			<div className="admin-edit-choses">

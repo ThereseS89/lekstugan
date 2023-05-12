@@ -197,6 +197,8 @@ export async function uploadProducts() {
  })
 }
 
+uploadProducts()
+
 
 
 
