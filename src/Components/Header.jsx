@@ -20,7 +20,6 @@ function stringIncludes(longString, shortString) {
 	return ls.includes(ss)
 }
 
-
 const Header = () => {
 const [showResult, setShowResult] = useRecoilState(showResultState)
 const [showNav, setShowNav] = useRecoilState(showNavState)

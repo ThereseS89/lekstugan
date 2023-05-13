@@ -6,9 +6,8 @@ import Admin from "./routes/Admin.jsx"
 import Cart from "./routes/Cart.jsx"
 import DetailPage from './routes/DetailPage.jsx'
 import ErrorPage from "./routes/ErrorPage.jsx"
-// import { useRecoilState } from "recoil"
-// import { showCartState } from "./atoms/showCartState.js"
-// const [showCart, setShowCart] = useRecoilState(showCartState)
+import AdminProducts from "./routes/AdminProducts.jsx"
+import AdminUsers from "./routes/AdminUsers.jsx"
 
 
 const router = createHashRouter([
@@ -28,8 +27,21 @@ const router = createHashRouter([
 					}, 
 					{
 						path: 'admin',
-						element: <Admin />
-					},
+						element: <Admin />,
+						children: [
+
+							{
+								path: 'adminproducts',
+								element: <AdminProducts />
+							},
+
+							{
+								path: 'adminusers',
+								element: <AdminUsers />
+							},
+						],
+					},	
+					
 					{
 						path: 'cart',
 						element:  <Cart /> 

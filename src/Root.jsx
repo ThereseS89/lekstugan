@@ -1,5 +1,5 @@
 
-import { Outlet } from "react-router-dom"
+import {  Outlet } from "react-router-dom"
 import HamburgerNav from "./Components/HamburgerNav"
 import Header from "./Components/header.jsx"
 import Footer from "./Components/Footer"
@@ -20,13 +20,13 @@ const Root = () => {
 	setShowResult;
 
 	return (
+		
 		<>
 			<Header />
 			{showNav ? <HamburgerNav /> : null}
 			{showResult ? <ResultContainer /> : null}
 		<main>
 			{open ? <Login /> : null}
-			{/* <Admin /> */}
 			<Outlet />
 		</main>
 			<Footer />

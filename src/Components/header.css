@@ -17,6 +17,12 @@ header {
 	padding-left: 0.5em;
 }
 
+#hamburger-icon:hover {
+	color:#429C76;
+	cursor: pointer;
+
+}
+
 .logo-container {
 	display: flex;
 	flex-direction: row;
@@ -32,6 +38,11 @@ header {
 	font-size: 1.5em;
 	padding-right: 0.5em;
 	color:black;
+}
+
+#cart-icon:hover {
+	color:#429C76;
+	cursor: pointer;
 }
 
 .searchBar {

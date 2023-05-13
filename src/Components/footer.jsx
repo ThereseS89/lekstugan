@@ -38,20 +38,20 @@ const [open, setOpen] = useRecoilState(openLoginState);
 			<div className="call-container">
 				<h4>Ring oss</h4> <FontAwesomeIcon icon={faPhone} />
 			</div>	
-				<p>049-47 48 76</p>
+				<p className="number">049-47 48 76</p>
 			
 			<div className="mail-container">
 				<h4>Mejla oss</h4> <FontAwesomeIcon icon={faEnvelope} />
 			</div>
 				<p>info@lekstugan.se</p>
-			<h4>Sociala Medier</h4>
+			<h4 className="social">Sociala Medier</h4>
 			<div className="social-media-icons-container">
 				<FontAwesomeIcon icon={faLinkedinIn} />
 				<FontAwesomeIcon icon={faInstagram} />
 				<FontAwesomeIcon icon={faFacebook} />
 				<FontAwesomeIcon icon={faYoutube} />
 			</div>
-			<Link to="/"><p>Startsidan</p></Link>
+			<Link className="start-link" to="/"><p>Startsidan</p></Link>
 			<span className="staff-container">
 			<p onClick={()=> openLogin()}>LOGGA IN</p><FontAwesomeIcon onClick={()=> openLogin()} icon={faArrowRightToBracket} />
 			</span>

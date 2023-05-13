@@ -1,0 +1,29 @@
+.close-form {
+	text-align: center;
+	background-color: #429C76;
+	margin: 0em 15em 1em 15em;
+}
+.close-form:hover {
+	cursor: pointer;
+	color: #F83362;
+	background-color: #d9d9d9;
+
+}
+
+.add-product-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #d9d9d9;
+}
+
+.add-product-form > * {
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+.add-product-form button:hover {
+	cursor: pointer;
+	background-color: #429C76;
+}

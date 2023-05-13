@@ -12,6 +12,13 @@
 	align-self: flex-end;
 	display: flex;
 	align-items: center;
+	color: white;
+	text-decoration: none;
+}
+
+.container-log-out:hover {
+	cursor: pointer;
+	color:black;
 }
 
 .head-container-admin p {

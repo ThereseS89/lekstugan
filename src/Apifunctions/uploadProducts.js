@@ -176,7 +176,7 @@ const data = [
 ]
 
 
-async function addProduct(product) {
+export async function addProduct(product) {
 	console.log('Adding product...')
 
 	const options = {
