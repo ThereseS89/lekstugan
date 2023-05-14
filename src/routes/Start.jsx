@@ -19,9 +19,9 @@ const Start = () => {
 
 			<div className="popular-container">
 
-				<h3>AquaPlay</h3>
+				<h3>Barnpool</h3>
 
-				<img src="./src/imgs/aquaplay.png" />
+				<img src="https://www.rusta.com/globalassets/inriver/resources/704012780101_637859689133538429.jpg?preset=ib" />
 
 				<div className="price-container">
 					<p className="price">399 kr</p>
