@@ -21,7 +21,7 @@ const Start = () => {
 
 				<h3>AquaPlay</h3>
 
-				<img src="../src/imgs/aquaplay.png" />
+				<img src="./src/imgs/aquaplay.png" />
 
 				<div className="price-container">
 					<p className="price">399 kr</p>
