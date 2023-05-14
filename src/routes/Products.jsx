@@ -1,5 +1,4 @@
 import { getProducts } from "../Apifunctions/getProducts.js"
-//import { uploadProducts } from "../Apifunctions/uploadProducts.js";
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
