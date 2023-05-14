@@ -5,9 +5,13 @@ body {
   background-color: white;
   font-family: 'Readex Pro', sans-serif;
   box-sizing: border-box;
-  min-height: 100vh;
-  position: relative;
+ 
 
+}
+
+main {
+  position: relative;
+  min-height: calc(100vh - 96.24px - 146.88px);
 }
 
 
