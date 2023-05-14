@@ -50,6 +50,9 @@ function summerToyMatch(summerToy, SearchString) {
 		let SearchString = event.target.value
 		setResultSummerToy(summerToys.filter(summerToy => summerToyMatch(summerToy, SearchString)))
 		console.log(resultSummerToy)
+		if (SearchString === "") {
+			setShowResult(false)
+		}
 	}
 
 	console.log(showNav)
@@ -101,6 +104,7 @@ function summerToyMatch(summerToy, SearchString) {
 				onClick={()=> showSearchBar()}
 				id="search-icon-wide" icon={faMagnifyingGlass} /></li>{showSearch ?<input 
 				onChange={handleChange}
+				onBlur={()=>setShowResult(false)}
 				type="text"
 				placeholder="Sök produkt"
 				className="search-input-wide" /> : null}
@@ -108,6 +112,7 @@ function summerToyMatch(summerToy, SearchString) {
 		
 		<div className="searchBar">
 			<input
+			onBlur={()=>setShowResult(false)}
 			onChange={handleChange}
 			type="text"
 			placeholder="Sök produkt"

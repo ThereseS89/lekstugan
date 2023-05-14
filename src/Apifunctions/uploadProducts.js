@@ -47,7 +47,7 @@ const data = [
 		name: "Uppblåsbar vattenleksak Flamingo",
 		price: 149,
 		description: 'Låt fantasin flöda och ge din pool eller sjö ännu mer glans med vår uppblåsbara vattenleksak i form av en Flamingo. Den är tillverkad av hållbart material och ger en bekväm plats att koppla av eller leka på vattnet. Perfekt för avkoppling eller roliga stunder i solen.',
-		picture: "https://exempel.jpeg",
+		picture: "https://images.clasohlson.com/medias/sys_master/h8c/h2e/68105151873054.jpg",
 		shopid: shopId
 	},
 	{
@@ -55,7 +55,7 @@ const data = [
 		name: "Kubb",
 		price: 99,
 		description: 'Njut av utomhusunderhållning med vår klassiska Kubb-speluppsättning. Bygg strategi, precision och skicklighet när du kastar träkubbarna för att välta motståndarens käglor. Perfekt för familjesamlingar och grillfester, detta spel kommer att skapa minnesvärda stunder och spänning.',
-		picture: "https://exempel.jpeg",
+		picture: "https://www.jula.se/globalassets/catalog/productimages/961001.jpg",
 		shopid: shopId
 	},
 	{
@@ -63,7 +63,7 @@ const data = [
 		name: "Bubbelmaskin",
 		price: 99,
 		description: 'Skapa en förtrollande atmosfär med vår bubbelmaskin. Den skapar otaliga bubblande bubblor och fyller luften med glädje. Perfekt för trädgårdsfester, barnkalas eller bara för att skapa en lekfull stämning. Enkel att använda och ger timmar av bubbelglädje!',
-		picture: "https://exempel.jpeg",
+		picture: "https://m.media-amazon.com/images/I/61wM-gZGriL._AC_SX679_.jpg",
 		shopid: shopId
 	},
 	{
@@ -71,7 +71,7 @@ const data = [
 		name: "Skateboard",
 		price: 399,
 		description: 'Utforska stadens gator eller cruisa i parken med vår skateboard. Med sin slitstarka konstruktion och greppvänliga yta ger den en smidig åktur och kontroll. Oavsett om du är nybörjare eller erfaren, är vår skateboard ett perfekt val för att testa dina skatefärdigheter.',
-		picture: "https://exempel.jpeg",
+		picture: "https://junkyard.imgix.net/globalassets/productimages/7325654_020_f_f_junkyard_rainbow_q3_junkyard.jpg?auto=format&ar=4:5&fit=crop&w=700",
 		shopid: shopId
 	},
 	{
@@ -112,7 +112,7 @@ const data = [
 		name: "Barnpool",
 		price: 299,
 		description: 'Skapa en oas för barnen i trädgården med vår barnpool. Med sin färgglada design och stadiga konstruktion erbjuder den en perfekt plats för att svalka sig och leka under soliga dagar. Fyll den med vatten och se barnen skratta och plaska i denna lilla pool som är gjord just för dem.',
-		picture: "https://exempel.jpeg",
+		picture: "https://www.rusta.com/globalassets/inriver/resources/704012780101_637859689133538429.jpg?preset=ib",
 		shopid: shopId
 	},
 

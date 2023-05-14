@@ -7,7 +7,6 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { Link } from "react-router-dom"
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons"
-import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 import { useRecoilState } from "recoil"
 import { openLoginState } from "../atoms/openLoginState"
 
