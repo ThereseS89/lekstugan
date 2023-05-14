@@ -4,7 +4,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import './login.css'
 import { useRecoilState } from "recoil";
 import { openLoginState } from "../atoms/openLoginState";
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 const Login = () => {
@@ -21,6 +21,9 @@ const Login = () => {
 	const allowedChars = "abcdefghijklmnopqrstuvwxyzåäö";
 	const [userNameError, setUserNameError] = useState(false);
 	const [passwordError, setPasswordError] = useState(false);
+	open;
+	isPasswordCorrect;
+	isUserNameCorrect;
 
 
 	const LoginEvents = (event) => {

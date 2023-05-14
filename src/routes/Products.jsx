@@ -67,7 +67,7 @@ const Products = () => {
 							to={{ pathname: `/products/${summerToy.id}`, state: { product: summerToy },
 					}}>
 								<h2 className="head-summertoy-text">{summerToy.name}</h2>
-								<div className="image-container">
+								<div className="image-container">	
 								<img className="summertoy-image"
 								src={summerToy.picture}/></div></Link>
 							<div className="price-container-summertoy">

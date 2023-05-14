@@ -1,0 +1,12 @@
+.close-result {
+	font-weight: bold;
+}
+
+.close-result:hover {
+	cursor: pointer;
+	color: #F83362;
+}
+
+.result-container {
+	padding-left: 1em;
+}

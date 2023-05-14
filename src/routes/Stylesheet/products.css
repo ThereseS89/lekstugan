@@ -88,6 +88,16 @@
 	
 }
 
+
+
+.summertoy-container:hover {
+	cursor: pointer;
+	transform: translate3d(0,-1px,0) scale(1.03);
+	transition: 0.5s ease-in-out;
+
+
+}
+
 @media (min-width: 610px) {
 	.summertoy-list {
 		gap: 2em;

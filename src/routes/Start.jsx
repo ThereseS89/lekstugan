@@ -1,5 +1,4 @@
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import "./Stylesheet/start.css"
 
 const Start = () => {
@@ -26,10 +25,6 @@ const Start = () => {
 
 				<div className="price-container">
 					<p className="price">399 kr</p>
-				</div>
-
-				<div className="cart-container">
-					<FontAwesomeIcon icon={faCartShopping} />
 				</div>
 
 			</div>

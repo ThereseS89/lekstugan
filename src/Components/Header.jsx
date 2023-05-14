@@ -14,6 +14,7 @@ import { resultState } from "../atoms/resultState";
 import { getProducts } from "../Apifunctions/getProducts";
 import { showResultState } from "../atoms/showResultState";
 
+
 function stringIncludes(longString, shortString) {
 	let ls = longString.toLowerCase()
 	let ss = shortString.toLowerCase()
@@ -21,6 +22,7 @@ function stringIncludes(longString, shortString) {
 }
 
 const Header = () => {
+
 const [showResult, setShowResult] = useRecoilState(showResultState)
 const [showNav, setShowNav] = useRecoilState(showNavState)
 const [summerToys, setSummerToys] = useRecoilState(storeApiData)
@@ -53,6 +55,7 @@ function summerToyMatch(summerToy, SearchString) {
 		if (SearchString === "") {
 			setShowResult(false)
 		}
+		
 	}
 
 	console.log(showNav)
@@ -86,13 +89,13 @@ function summerToyMatch(summerToy, SearchString) {
 		id="close-Icon" 
 		onClick={() => setShowNav(false)} icon={faXmark} /> :
 			<FontAwesomeIcon id="hamburger-icon" icon={faBars} onClick={()=> handleClickNav()}/> }
-			<img src={logo} />
+			<Link to="/"> <img src={logo} /></Link>
 			<div className="spacer"></div>
 			<Link to="cart">
-				<div className="cart">
+				<div className="cart" data-product-count={0}>
 				<FontAwesomeIcon
 						icon={faCartShopping}
-						id="cart-icon" />
+						id="cart-icon"  />
 						</div>
 			</Link>
 		</div>
@@ -104,7 +107,7 @@ function summerToyMatch(summerToy, SearchString) {
 				onClick={()=> showSearchBar()}
 				id="search-icon-wide" icon={faMagnifyingGlass} /></li>{showSearch ?<input 
 				onChange={handleChange}
-				onBlur={()=>setShowResult(false)}
+				// onBlur={()=>setShowResult(false)}
 				type="text"
 				placeholder="Sök produkt"
 				className="search-input-wide" /> : null}
@@ -112,7 +115,7 @@ function summerToyMatch(summerToy, SearchString) {
 		
 		<div className="searchBar">
 			<input
-			onBlur={()=>setShowResult(false)}
+			// onBlur={()=>setShowResult(false)}
 			onChange={handleChange}
 			type="text"
 			placeholder="Sök produkt"

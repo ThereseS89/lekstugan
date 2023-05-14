@@ -43,6 +43,25 @@ header {
 #cart-icon:hover {
 	color:#429C76;
 	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.cart::before {
+	position: absolute;
+	content: attr(data-product-count);
+	top: 0.5rem;
+	right: 0.5rem;
+	background-color: #429C76;
+	border-radius: 1em;
+	width: 1rem;
+	height: 1rem;
+	text-align: center;
+	font-size: 14px;
+	padding: 0.1em;
+}
+
+.cart.active > span {
+	margin-left: -4rem;
 }
 
 .searchBar {

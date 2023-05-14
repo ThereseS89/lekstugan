@@ -7,6 +7,9 @@ footer {
 	align-items: center;
 	margin-top: 2em;
 	width: 100%;
+	position: inherit;
+	bottom: 0;
+	overflow: hidden;
 
 }
 
@@ -41,7 +44,7 @@ footer h4, footer p, footer h3 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		grid-column: 5;
+		grid-column: 4;
 		grid-row: 1;
 		padding-right: 1.5em;
 	}
@@ -57,17 +60,24 @@ footer h4, footer p, footer h3 {
 
 	footer {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr;
-		padding: 2em;
+		margin:0;
+		width: 100%;
+	}
+
+	footer h3 {
+		padding-left: 1em;
 	}
 
 	.call-container{
 		grid-column: 1;
+		padding-left: 1em;
 	}
 
 	.number {
 		grid-column: 1;
+		padding-left: 1em;
 	}
 
 	.mail-container {

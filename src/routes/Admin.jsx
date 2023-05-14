@@ -22,7 +22,6 @@ const Admin = () => {
 			deleteProduct(id)
 		}
 		
-	
 
 	useEffect(() => {
 		//uploadProducts()

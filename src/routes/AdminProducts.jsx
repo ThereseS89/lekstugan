@@ -13,6 +13,8 @@ const AdminProducts = () => {
 	const [newSummerToyPrice, setNewSummerToyPrice] = useState("")
 	const [newSummerToyDescription, setNewSummerToyDescription] = useState("")
 	const navigate = useNavigate()
+	const [nameIsDirty, setNameIsDirty] = useState(false)
+
 
 	const goBack = () => {
 		navigate(-1)
@@ -21,7 +23,7 @@ const AdminProducts = () => {
 	// Skapa en funktion som pushar in den nya produkten i arrayen.
 	const[addSummerToyId, setAddSummerToyId]  = useState(0) 
 
-	function addSummerToy() {
+	function addSummerToy(event) {
 		const newSummerToy = {
 		action: 'add-product',
 		id: addSummerToyId,
@@ -35,8 +37,27 @@ const AdminProducts = () => {
 		setAddSummerToyId(prevId => prevId + 1)
 		console.log('Lägger till produkt...', summerToys)
 		addProduct(newSummerToy)
-		
+		event.preventDefault()
 	}
+
+	function isValidProductName(NewSummerToyName) {
+		const AllowedChars = 'abcdefghijklmnopqrstuvxyzåäö'
+		if(newSummerToyName.length <2) {
+			return false
+		}
+	
+		for(let i = 0; i<NewSummerToyName.length; i++){
+			let c = NewSummerToyName.charAt(i).toLowerCase()
+			if (!AllowedChars.includes(c)) {
+			return false
+		} 
+	} return true 
+
+	} 
+
+	const nameIsValid = isValidProductName(newSummerToyName)
+		
+	
 
 	return (
 		<section>
@@ -45,12 +66,15 @@ const AdminProducts = () => {
 			<form className="add-product-form">
 				<input 
 				type="text" placeholder="produktnamn" value={newSummerToyName}
-				onChange={(e) => setNewSummerToyName(e.target.value)}/>
+				onChange={(e) => {setNewSummerToyName(e.target.value);setNameIsDirty(true)}}
+				onBlur={() => setNameIsDirty(true)}/>
+			{ nameIsDirty && !nameIsValid ? <p>Vänligen! Använd bara bokstäver, tack </p> : '' }
+
 
 				<input
 				type="text"
-				placeholder="bild"
-				onChange={(e) => setNewSummerToyPicture(e.target.value)}/>
+				placeholder="URL"
+				onChange= {(e) => setNewSummerToyPicture(e.target.value)}/>
 
 				<input 
 				type="text"
@@ -62,7 +86,7 @@ const AdminProducts = () => {
 				placeholder="Beskrivning"
 				onChange={(e) => setNewSummerToyDescription(e.target.value)}/>
 
-				<button onClick={addSummerToy}>Lägg till produkt</button>
+				<button type="submit" onClick={addSummerToy}>Lägg till produkt</button>
 			</form>
 		</section>
 
