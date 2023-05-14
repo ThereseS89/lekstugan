@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import './index.css'
+import './Components/footer.css'
 import router from './routeConfig'
 import { RecoilRoot } from 'recoil'
 

@@ -29,7 +29,7 @@ const [open, setOpen] = useRecoilState(openLoginState);
 	console.log("open:", open);
 
 	return (
-		<>
+		<div className="wrapper">
 		
 
 		<footer>
@@ -55,7 +55,7 @@ const [open, setOpen] = useRecoilState(openLoginState);
 			<p onClick={()=> openLogin()}>LOGGA IN</p><FontAwesomeIcon onClick={()=> openLogin()} icon={faArrowRightToBracket} />
 			</span>
 		</footer>
-		</>
+		</div>
 	)
 } 
 
